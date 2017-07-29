@@ -1,0 +1,37 @@
+name: BlockTele
+main: blocktele.BlockTele
+version: 0.1.0
+commands:
+  blocktele:
+    description: Use the plugin.
+    usage: /<command> <reload|unlink|setwarp <name>|delwarp <name>|linkwarp <name>>
+    permission: blocktele.use
+    permission-message: You don't have permission to use this plugin!
+permissions:
+  blocktele.*:
+    description: Allows you to do anything with this plugin.
+    children:
+      blocktele.use: true
+      blocktele.select: true
+      blocktele.reload: true
+      blocktele.unlink: true
+      blocktele.setwarp: true
+      blocktele.link: true
+  blocktele.use:
+    description: Allows you to use the plugin.
+    default: true
+  blocktele.select:
+    description: Allows you to select blocks.
+    default: op
+  blocktele.reload:
+    description: Allows you to reload the configuration.
+    default: op
+  blocktele.unlink:
+    description: Allows you to delete block portals.
+    default: op
+  blocktele.setwarp:
+    description: Allows you to set and delete warps.
+    default: op
+  blocktele.link:
+    description: Allows you to create portals.
+    default: op
